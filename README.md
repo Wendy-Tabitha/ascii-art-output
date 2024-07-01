@@ -1,5 +1,5 @@
 ## ASCII ART OUTPUT
-* ASCII-art-output is a program written in Go that takes a string as input and outputs a graphic representation of the string using ASCII characters.
+* Ascii-art-output is a program written in Go that takes a string as input and outputs a graphic representation of the string using ASCII characters.
 * Additionally the file name of the program must be named using flag --output=<filename.txt>, where --output is the flag and <filename.txt> is the file name which will contain the output.
 
 ## Features ##
