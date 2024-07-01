@@ -28,6 +28,7 @@ cd ascii-art-output
 ```bash
 go run . [OPTION] [STRING] [BANNER]
 ```
+Example: go run . --output=<fileName.txt> something standard
 
 
 ## Banner Format
@@ -44,12 +45,16 @@ The program includes several banner formats for graphical representation using A
 
 >  The program automatically takes the banner format of `standard`, but if the user wants to use other graphical representation, the banner format desired should be the third arguement in lower case as listed above.
 
-
-EX: go run . --output=<fileName.txt> something standard
 ### Running Tests
-To run unit tests, navigate to the project directory and run:
+To run unit tests, navigate to the project directory and run the following command:
 ```bash
 go test -v
+```
+
+### Formatting program
+To format the program, navigate to the project directory and run the following command:
+```bash
+gofmt -w -s .
 ```
 
 ## AUTHORS
