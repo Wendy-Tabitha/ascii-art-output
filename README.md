@@ -1,5 +1,5 @@
 ## ASCII ART OUTPUT
-* ASCII-art-output is a program written in Go that takes a string as input and outputs a graphic representation of the string using ASCII characters.
+* Ascii-art-output is a program written in Go that takes a string as input and outputs a graphic representation of the string using ASCII characters.
 * Additionally the file name of the program must be named using flag --output=<filename.txt>, where --output is the flag and <filename.txt> is the file name which will contain the output.
 
 ## Features ##
@@ -28,6 +28,7 @@ cd ascii-art-output
 ```bash
 go run . [OPTION] [STRING] [BANNER]
 ```
+Example: go run . --output=<fileName.txt> something standard
 
 
 ## Banner Format
@@ -44,12 +45,16 @@ The program includes several banner formats for graphical representation using A
 
 >  The program automatically takes the banner format of `standard`, but if the user wants to use other graphical representation, the banner format desired should be the third arguement in lower case as listed above.
 
-
-EX: go run . --output=<fileName.txt> something standard
 ### Running Tests
-To run unit tests, navigate to the project directory and run:
+To run unit tests, navigate to the project directory and run the following command:
 ```bash
 go test -v
+```
+
+### Formatting program
+To format the program, navigate to the project directory and run the following command:
+```bash
+gofmt -w -s .
 ```
 
 ## AUTHORS
