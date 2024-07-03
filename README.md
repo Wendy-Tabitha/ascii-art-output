@@ -11,6 +11,7 @@
 * We also included our own bannerfile i.e lean.txt
 * Additionally, the program must still be able to run with a single [STRING] argument.  Example : (go run . hello) output printed should be (hello) in the default graphical representation(in our case the default is standard)
 * The flag accepted is the one with two hyphen (--).
+* File name of choice accepted expect be it one of the bannerfiles
 ## Instructions to run locally
 
 To clone this repository, copy the command below on your terminal:
