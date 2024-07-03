@@ -23,12 +23,12 @@ func main() {
 	asciiArtFile := check.ArtFile(banner)
 	bannerFileContents := file.ReadArtFile(asciiArtFile)
 
-	// the variable inputArgs splits the string(arguement) into substrings, by a separator "\n"
+	// The variable inputArgs splits the string(arguement) into substrings, by a separator "\n".
 	inputArgs := strings.Split(text, "\\n")
 
 	output := graphics.Graphic(inputArgs, bannerFileContents)
 	if data.OutputFile != "" {
-		// wrte output to data.OutputFile
+		// Write output to data.OutputFile.
 		result := []byte(output)
 		err := os.WriteFile(data.OutputFile, result, 0644)
 		if err != nil {

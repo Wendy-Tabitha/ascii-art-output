@@ -1,6 +1,6 @@
 package graphics
 
-// this function is used to show the graphics by calculating the value of each line and returning the string version of the graphic.
+// This function is used to show the graphics by calculating the value of each line and returning the string version of the graphic.
 func Graphic(str, banner []string) string {
 	var lines int
 	result := ""

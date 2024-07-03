@@ -6,9 +6,9 @@ import (
 	"regexp"
 )
 
-// ReadArtFile reads all the lines in the given ascii art file, then returns all the lines read
+// ReadArtFile reads all the lines in the given ascii art file, then returns all the lines read.
 func ReadArtFile(asciiArtFile string) []string {
-	// Read the ascii art file
+	// Read the ascii art file.
 	asciiArt, err := os.ReadFile(asciiArtFile)
 	if err != nil {
 		fmt.Printf("Error reading file: %q\n%v\n", asciiArtFile, err)
@@ -51,10 +51,10 @@ func ReadArtFile(asciiArtFile string) []string {
 		}
 	}
 
-	// Convert asciiArt from bytes to string
+	// Convert asciiArt from bytes to string.
 	asciiArtString := string(asciiArt)
 
-	// Split asciiArtString into lines
+	// Split asciiArtString into lines.
 	re := regexp.MustCompile(`\r?\n`)
 	bannerFileContents := re.Split(asciiArtString, -1)
 
