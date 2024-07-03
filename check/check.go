@@ -9,12 +9,12 @@ import (
 	"ascii/types"
 )
 
-// Usage checks if the program was supplied the expected command-line arguments, exits on usage error
+// Usage checks if the program was supplied the expected command-line arguments, exits on usage error.
 func Usage(args []string) types.Data {
 	if len(args) == 0 {
 		PrintUsage()
 	} else if len(args) > 3 {
-		// checks if the there are more than three arguements
+		// Checks if the there are more than three arguements.
 		PrintUsage()
 	}
 	var out types.Data
@@ -49,26 +49,26 @@ func PrintUsage() {
 }
 
 func Text(text string) string {
-	// Replace all the newline characters `\n` in the arguement with `\\n`
+	// Replace all the newline characters `\n` in the arguement with `\\n`.
 	text = strings.ReplaceAll(text, "\n", "\\n")
 
 	if text == "" {
-		// Nothing to draw
+		// Nothing to draw.
 		os.Exit(0)
 	} else if text == "\\n" {
-		// if the arguement is "\n" the program prints a new line
+		// If the arguement is "\n" the program prints a new line.
 		fmt.Println()
 		os.Exit(0)
 	}
 
 	out := ""
-	// checking if the runes of the string in the arguement is not of an ascii decimal value of more than 126
+	// Checking if the runes of the string in the arguement is not of an ascii decimal value of more than 126.
 	for _, char := range text {
 		if char > '~' {
 			fmt.Println("Error : Non Ascii character found!! can not display the graphic representation")
 			os.Exit(1)
 		} else if char >= ' ' {
-			// Ignore ASCII characters before the ' ' (space) character
+			// Ignore ASCII characters before the ' ' (space) character.
 			out += string(char)
 		}
 	}
@@ -76,7 +76,7 @@ func Text(text string) string {
 	return out
 }
 
-// ArtFile given a banner, returns the name of the file with the graphics for the given banner
+// ArtFile given a banner, returns the name of the file with the graphics for the given banner.
 func ArtFile(banner string) string {
 	switch banner {
 	case "standard":
