@@ -9,8 +9,8 @@
 * Command-Line Interface-: Accessible via the command line for easy input and output.
 * Error Handling:- Implements robust error handling to ensure reliable performance.
 * We also included our own bannerfile i.e lean.txt
-* Additionally, the program must still be able to run with a single [STRING] argument.  Example : (go run . hello) output printed should be (hello) in the specified graphical representation
-
+* Additionally, the program must still be able to run with a single [STRING] argument.  Example : (go run . hello) output printed should be (hello) in the default graphical representation(in our case the default is standard)
+* The flag accepted is the one with two hyphen (--).
 ## Instructions to run locally
 
 To clone this repository, copy the command below on your terminal:
