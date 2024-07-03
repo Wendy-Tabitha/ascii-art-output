@@ -12,8 +12,7 @@ import (
 // Usage checks if the program was supplied the expected command-line arguments, exits on usage error
 func Usage(args []string) types.Data {
 	if len(args) == 0 {
-		// case: go run .
-		os.Exit(0)
+		PrintUsage()
 	} else if len(args) > 3 {
 		// checks if the there are more than three arguements
 		PrintUsage()
@@ -55,10 +54,9 @@ func Usage(args []string) types.Data {
 func PrintUsage() {
 	usage := "Usage: go run . [OPTION] [STRING] [BANNER]\n\nEX: go run . --output=<fileName.txt> something standard"
 	fmt.Println(usage)
-	os.Exit(1)
+	os.Exit(0)
 }
 
-// Text
 func Text(text string) string {
 	// Replace all the newline characters `\n` in the arguement with `\\n`
 	text = strings.ReplaceAll(text, "\n", "\\n")
