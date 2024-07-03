@@ -22,21 +22,12 @@ func Usage(args []string) types.Data {
 	if len(args) == 1 {
 		inValid, _ := Expressions(args[0])
 		if inValid {
-			os.Exit(0)
+			PrintUsage()
 		} else {
 			out.Text = args[0]
 		}
 	} else if len(args) == 2 {
-		isValid, filename := Expressions(args[0])
-		if isValid {
-			out.OutputFile = filename
-			out.Text = args[1]
-		} else if !strings.HasPrefix(args[0], "--") {
-			out.Text = args[0]
-			out.Banner = args[1]
-		} else {
-			PrintUsage()
-		}
+		PrintUsage()
 	} else if len(args) == 3 {
 		isValid, filename := Expressions(args[0])
 		if isValid {
