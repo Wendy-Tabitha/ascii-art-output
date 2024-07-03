@@ -57,7 +57,6 @@ func PrintUsage() {
 	os.Exit(0)
 }
 
-// Text
 func Text(text string) string {
 	// Replace all the newline characters `\n` in the arguement with `\\n`
 	text = strings.ReplaceAll(text, "\n", "\\n")
