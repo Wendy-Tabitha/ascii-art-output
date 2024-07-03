@@ -20,17 +20,17 @@ func Usage(args []string) types.Data {
 	var out types.Data
 
 	if len(args) == 1 {
-		isValid, _ := Expressions(args[0])
-		if isValid {
-			PrintUsage()
+		inValid, _ := Expressions(args[0])
+		if inValid {
+			os.Exit(0)
 		} else {
 			out.Text = args[0]
 		}
 	} else if len(args) == 2 {
 		isValid, filename := Expressions(args[0])
 		if isValid {
-			out.Text = args[1]
 			out.OutputFile = filename
+			out.Text = args[1]
 		} else if !strings.HasPrefix(args[0], "--") {
 			out.Text = args[0]
 			out.Banner = args[1]
