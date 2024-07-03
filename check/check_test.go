@@ -33,8 +33,7 @@ func TestExpressions(t *testing.T) {
 		args  args
 		want  bool
 		want1 string
-	}{
-	}
+	}{}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			got, got1 := Expressions(tt.args.s)

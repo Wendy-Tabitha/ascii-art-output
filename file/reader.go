@@ -48,9 +48,8 @@ func ReadArtFile(asciiArtFile string) []string {
 		if fileSize != 10871 {
 			fmt.Println("lean filesize Tampered")
 			os.Exit(1)
-		}	
+		}
 	}
-	
 
 	// Convert asciiArt from bytes to string
 	asciiArtString := string(asciiArt)
