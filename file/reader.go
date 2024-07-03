@@ -44,7 +44,13 @@ func ReadArtFile(asciiArtFile string) []string {
 			fmt.Println("Thinkertoy filesize Tampered")
 			os.Exit(1)
 		}
+	case "lean.txt":
+		if fileSize != 10871 {
+			fmt.Println("lean filesize Tampered")
+			os.Exit(1)
+		}	
 	}
+	
 
 	// Convert asciiArt from bytes to string
 	asciiArtString := string(asciiArt)
