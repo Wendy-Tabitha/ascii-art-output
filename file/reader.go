@@ -16,7 +16,7 @@ func ReadArtFile(asciiArtFile string) []string {
 	}
 
 	if len(asciiArt) == 0 {
-		fmt.Println("The banner file is empty")
+		fmt.Println("Empty banner file")
 		os.Exit(1)
 	}
 
